@@ -5,19 +5,22 @@ using UnityEngine;
 public class EnemyShooter : MonoBehaviour {
 
 	public GameObject enemybullet;
+	public float cooltime = 3;
 
-	// Use this for initialization
+
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 		
-		if (Input.GetKey(KeyCode.Space))
+		cooltime = cooltime - Time.deltaTime;
+
+		if (cooltime < 0)
 		{
-			Debug.Log("space");
 			Instantiate(enemybullet, transform.position, transform.rotation);
+			cooltime = 3;
 		}
 
 	}
