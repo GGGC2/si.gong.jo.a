@@ -14,9 +14,8 @@ public class PlayerMove : MonoBehaviour {
 	void Update () {
 		float delta = speed * Time.deltaTime;
 		// transform.position = new Vector3(transform.position.x, transform.position.y + delta, transform.position.z);
-		if (Input.GetKeyDown("w"))
+		if (Input.GetKey(KeyCode.W))
 		{
-			Debug.Log("awefaeaw");
 			transform.position = new Vector3(transform.position.x, transform.position.y + delta, transform.position.z);
 		}
 		if (Input.GetKey(KeyCode.A))
