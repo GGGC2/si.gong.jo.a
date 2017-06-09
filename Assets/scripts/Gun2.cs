@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour {
+public class Gun2 : MonoBehaviour {
 	public Bullets b;
 	public float msBetweenShots = 100; //연사속도
 	public float muzzleVel = 35; //총구속도 
@@ -14,19 +14,19 @@ public class Gun : MonoBehaviour {
 	/// </summary>
 	void Update()
 	{
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.UpArrow))
 		{
 			transform.eulerAngles = Vector3.one;
 		}
-		if (Input.GetKey(KeyCode.A))
+		if (Input.GetKey(KeyCode.LeftArrow))
 		{
 			transform.eulerAngles = new Vector3(0, 0, 90);
 		}
-		if (Input.GetKey(KeyCode.S))
+		if (Input.GetKey(KeyCode.DownArrow))
 		{
 			transform.eulerAngles = new Vector3(0, 0, 180);
 		}
-		if (Input.GetKey(KeyCode.D))
+		if (Input.GetKey(KeyCode.RightArrow))
 		{
 			transform.eulerAngles = new Vector3(0, 0, 270);
 		}
