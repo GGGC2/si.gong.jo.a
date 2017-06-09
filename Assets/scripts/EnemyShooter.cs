@@ -9,7 +9,7 @@ public class EnemyShooter : MonoBehaviour {
 
 
 	void Start () {
-		
+		cooltime = 0.5f;
 	}
 	
 
@@ -22,6 +22,5 @@ public class EnemyShooter : MonoBehaviour {
 			Instantiate(enemybullet, transform.position, transform.rotation);
 			cooltime = 3;
 		}
-
 	}
 }

@@ -17,13 +17,13 @@ public class Enemy : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("OnTriggerEnter");
-        if (col.gameObject.name == "Enemy")
-        {
-            Destroy(col.gameObject);
-            Debug.Log("Destroy");
-        }
+        Debug.Log("enemy trigger");
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("enemy collision");
     }
 }

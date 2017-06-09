@@ -13,6 +13,14 @@ public class EnemyBullet : MonoBehaviour {
 
 		float delta = 1.0f * Time.deltaTime;
 
-		transform.position = new Vector3(transform.position.x + delta, transform.position.y, transform.position.z);
+		Vector3 deltaVec = transform.right * delta;
+		transform.position = transform.position + deltaVec;
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.name.Contains("player")) {
+			Destroy(other.gameObject);
+		}
 	}
 }
