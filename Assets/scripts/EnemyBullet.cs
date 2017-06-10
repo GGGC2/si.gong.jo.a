@@ -22,5 +22,8 @@ public class EnemyBullet : MonoBehaviour {
 		if (other.gameObject.name.Contains("player")) {
 			Destroy(other.gameObject);
 		}
+		if(other.gameObject.name.Contains("wall")){
+			Destroy(gameObject);
+		}
 	}
 }
