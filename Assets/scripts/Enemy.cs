@@ -1,20 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
+    public Transform target;
+    private GameObject player;
+    private GameObject enemy;
+    private float range;
+    public float spd;
 
-    // Use this for initialization
-    void Start()
-    {
-
+    void Start() {
+      //  enemy = GameObject.FindGameObjectWithTag ("Enemy");
+        player = GameObject.FindGameObjectWithTag ("Player");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+    void Update() {
+        if(player != null) {
+            range = Vector2.Distance (transform.position, player.transform.position);
+               //if(range <= 5f) {
+                    Debug.Log(transform.position);
+                    Debug.Log(player.transform.position);
+                    Debug.Log(Vector2.MoveTowards (transform.position, player.transform.position, range) );
+                    
+                    Debug.Log(Vector2.MoveTowards (transform.position, player.transform.position, range) * spd * Time.deltaTime);
+                  //  transform.Translate(Vector2.MoveTowards (transform.position, player.transform.position, range) * spd * Time.deltaTime);
+                  transform.position = Vector3.MoveTowards (transform.position, player.transform.position, range * spd * Time.deltaTime) ;
+//                    transform.Translate();
+              //  }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
