@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour {
-
+	public GameObject p;
+	Vector3 deltaVec;
+	Vector3 diff;
+	float spd;
+	float delta;
 
 	void Start () {
+		p = GameObject.FindGameObjectWithTag("Player");
+		p.GetComponent<Player>();
+		spd = 10.0f;
+		delta = spd * Time.deltaTime;
+		diff = (p.transform.position - transform.position).normalized;
+		deltaVec = diff * delta;
 		
 	}
 
 	void Update () {
-
-		float delta = 1.0f * Time.deltaTime;
-
-		Vector3 deltaVec = transform.right * delta;
+		delta = spd * Time.deltaTime;
 		transform.position = transform.position + deltaVec;
 	}
 

@@ -18,16 +18,14 @@ public class Enemy : MonoBehaviour {
     void Update() {
         if(player != null) {
             range = Vector2.Distance (transform.position, player.transform.position);
-               //if(range <= 5f) {
+               if(range <= 5f) {
                     Debug.Log(transform.position);
                     Debug.Log(player.transform.position);
                     Debug.Log(Vector2.MoveTowards (transform.position, player.transform.position, range) );
                     
                     Debug.Log(Vector2.MoveTowards (transform.position, player.transform.position, range) * spd * Time.deltaTime);
-                  //  transform.Translate(Vector2.MoveTowards (transform.position, player.transform.position, range) * spd * Time.deltaTime);
                   transform.position = Vector3.MoveTowards (transform.position, player.transform.position, range * spd * Time.deltaTime) ;
-//                    transform.Translate();
-              //  }
+               }
         }
     }
 
