@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBullet : MonoBehaviour {
+public class BronzeEnemyBullet : MonoBehaviour {
 
 
 	void Start () {

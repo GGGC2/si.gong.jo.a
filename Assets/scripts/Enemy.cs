@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
     private GameObject player;
     private GameObject enemy;
     private float range;
-    public float spd;
+    public float Bronzespd;
 
     void Start() {
       //  enemy = GameObject.FindGameObjectWithTag ("Enemy");
@@ -23,9 +23,9 @@ public class Enemy : MonoBehaviour {
                     Debug.Log(player.transform.position);
                     Debug.Log(Vector2.MoveTowards (transform.position, player.transform.position, range) );
                     
-                    Debug.Log(Vector2.MoveTowards (transform.position, player.transform.position, range) * spd * Time.deltaTime);
+                    Debug.Log(Vector2.MoveTowards (transform.position, player.transform.position, range) * Bronzespd * Time.deltaTime);
                   //  transform.Translate(Vector2.MoveTowards (transform.position, player.transform.position, range) * spd * Time.deltaTime);
-                  transform.position = Vector3.MoveTowards (transform.position, player.transform.position, range * spd * Time.deltaTime) ;
+                  transform.position = Vector3.MoveTowards (transform.position, player.transform.position, range * Bronzespd * Time.deltaTime) ;
 //                    transform.Translate();
               //  }
         }
