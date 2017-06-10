@@ -20,7 +20,8 @@ public class EnemyBullet : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.name.Contains("player")) {
-			Destroy(other.gameObject);
+			Destroy(gameObject);
+			other.SendMessage("hit");
 		}
 		if(other.gameObject.name.Contains("wall")){
 			Destroy(gameObject);
