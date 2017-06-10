@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 7
+  serializedVersion: 8
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -25,6 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -41,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 7
+  serializedVersion: 9
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -53,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 4
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -66,13 +67,27 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_DirectLightInLightProbes: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFiltering: 0
+    m_PVRFilteringMode: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_RuntimeCPUUsage: 25
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -89,6 +104,8 @@ NavMeshSettings:
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &2051227
@@ -204,9 +221,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &7637528
 Prefab:
   m_ObjectHideFlags: 0
@@ -465,7 +493,7 @@ Light:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 17029681}
   m_Enabled: 1
-  serializedVersion: 7
+  serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
@@ -490,6 +518,8 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &17029683
@@ -858,9 +888,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &38929891
 Prefab:
   m_ObjectHideFlags: 0
@@ -1505,9 +1546,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &66882600
 Prefab:
   m_ObjectHideFlags: 0
@@ -1849,7 +1901,7 @@ Transform:
   - {fileID: 1226654264}
   - {fileID: 202543339}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &96384289
 Prefab:
@@ -2332,7 +2384,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -2476,7 +2528,7 @@ Transform:
   - {fileID: 1253677788}
   - {fileID: 1754603129}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &119081877
 Prefab:
@@ -2714,7 +2766,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -2954,7 +3006,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 57
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -3184,7 +3236,7 @@ Transform:
   - {fileID: 819135875}
   - {fileID: 1481151799}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &182108986
 Prefab:
@@ -3274,7 +3326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 50
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -3748,9 +3800,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &225134729
 Prefab:
   m_ObjectHideFlags: 0
@@ -3885,7 +3948,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1954868338240616, guid: 117cff77199034bb59b1426ddc7ac180, type: 2}
       propertyPath: m_Name
@@ -4074,7 +4137,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1954868338240616, guid: 117cff77199034bb59b1426ddc7ac180, type: 2}
       propertyPath: m_Name
@@ -4198,7 +4261,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -4290,7 +4353,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -4833,9 +4896,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &326523720
 Prefab:
   m_ObjectHideFlags: 0
@@ -5337,9 +5411,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &342253964
 Prefab:
   m_ObjectHideFlags: 0
@@ -5943,9 +6028,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &384995760
 Prefab:
   m_ObjectHideFlags: 0
@@ -6085,7 +6181,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -6258,9 +6354,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &394996988
 Prefab:
   m_ObjectHideFlags: 0
@@ -6587,7 +6694,7 @@ Transform:
   - {fileID: 628096011}
   - {fileID: 1942125522}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &407904949
 Prefab:
@@ -6707,9 +6814,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &412799967
 Prefab:
   m_ObjectHideFlags: 0
@@ -6747,7 +6865,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 33
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -6925,9 +7043,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &437642534
 Prefab:
   m_ObjectHideFlags: 0
@@ -7133,9 +7262,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!4 &459719487 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180,
@@ -7292,9 +7432,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &469236321
 Prefab:
   m_ObjectHideFlags: 0
@@ -7658,9 +7809,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &492295140
 Prefab:
   m_ObjectHideFlags: 0
@@ -8168,7 +8330,7 @@ Transform:
   - {fileID: 1512397137}
   - {fileID: 1487973553}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &534050142
 Prefab:
@@ -9056,7 +9218,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 59
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -9132,9 +9294,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &599921250
 Prefab:
   m_ObjectHideFlags: 0
@@ -9276,7 +9449,7 @@ Transform:
   - {fileID: 297087774}
   - {fileID: 492483378}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &613664251
 Prefab:
@@ -9492,7 +9665,7 @@ Transform:
   - {fileID: 1589400164}
   - {fileID: 1430510159}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &626590092
 Prefab:
@@ -9663,9 +9836,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!4 &640147034 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180,
@@ -9973,9 +10157,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &677234919
 Prefab:
   m_ObjectHideFlags: 0
@@ -10043,9 +10238,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &683680626
 Prefab:
   m_ObjectHideFlags: 0
@@ -10189,6 +10395,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180,
     type: 2}
   m_PrefabInternal: {fileID: 694014453}
+--- !u!1 &695456268 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1088118156100774, guid: e988ba57b5d0a4640b703456808cc5fb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636712955}
 --- !u!4 &695985449 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180,
@@ -10639,9 +10850,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &761493442
 Prefab:
   m_ObjectHideFlags: 0
@@ -10898,9 +11120,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &776732405
 Prefab:
   m_ObjectHideFlags: 0
@@ -11065,9 +11298,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &784864352
 Prefab:
   m_ObjectHideFlags: 0
@@ -11794,7 +12038,7 @@ Transform:
   - {fileID: 1354125432}
   - {fileID: 613664252}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &831234335
 Prefab:
@@ -12134,7 +12378,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 60
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -12976,9 +13220,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &923378879
 Prefab:
   m_ObjectHideFlags: 0
@@ -13332,9 +13587,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!4 &946060837 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180,
@@ -13617,7 +13883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 56
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -13709,7 +13975,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 36
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -14607,7 +14873,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 61
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -15122,9 +15388,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!4 &1063345114 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180,
@@ -15513,11 +15790,16 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b6227aa07f7004b43b8f990ccf996950, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
 --- !u!4 &1090404049
 Transform:
   m_ObjectHideFlags: 0
@@ -15529,7 +15811,7 @@ Transform:
   m_LocalScale: {x: 0.37001836, y: 0.36268878, z: 1.0154883}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1094405952
 Prefab:
@@ -15792,9 +16074,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1115722316
 Prefab:
   m_ObjectHideFlags: 0
@@ -16823,9 +17116,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1195507848
 Prefab:
   m_ObjectHideFlags: 0
@@ -16944,9 +17248,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1201453559
 Prefab:
   m_ObjectHideFlags: 0
@@ -17030,7 +17345,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 41
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -17099,7 +17414,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1215546948
 Prefab:
@@ -17728,7 +18043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1245352618
 Prefab:
@@ -18262,7 +18577,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 40
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -18308,7 +18623,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 49
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -18359,7 +18674,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 58
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -18543,7 +18858,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -18655,7 +18970,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 37
+      value: 38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
@@ -19120,9 +19435,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1350454888
 Prefab:
   m_ObjectHideFlags: 0
@@ -19645,7 +19971,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 48
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -19788,7 +20114,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1954868338240616, guid: 117cff77199034bb59b1426ddc7ac180, type: 2}
       propertyPath: m_Name
@@ -19991,6 +20317,58 @@ Transform:
   m_PrefabParentObject: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180,
     type: 2}
   m_PrefabInternal: {fileID: 1381495829}
+--- !u!1001 &1382135792
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4082253144334554, guid: 6db21457f38615c48b178479c1353e9a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082253144334554, guid: 6db21457f38615c48b178479c1353e9a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082253144334554, guid: 6db21457f38615c48b178479c1353e9a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082253144334554, guid: 6db21457f38615c48b178479c1353e9a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082253144334554, guid: 6db21457f38615c48b178479c1353e9a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082253144334554, guid: 6db21457f38615c48b178479c1353e9a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082253144334554, guid: 6db21457f38615c48b178479c1353e9a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082253144334554, guid: 6db21457f38615c48b178479c1353e9a, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114257845277671348, guid: 6db21457f38615c48b178479c1353e9a,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 695456268}
+    - target: {fileID: 114257845277671348, guid: 6db21457f38615c48b178479c1353e9a,
+        type: 2}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 1872757588}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6db21457f38615c48b178479c1353e9a, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1383889309
 Prefab:
   m_ObjectHideFlags: 0
@@ -20268,7 +20646,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 55
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -20626,9 +21004,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1424880155
 Prefab:
   m_ObjectHideFlags: 0
@@ -20666,7 +21055,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 43
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -20972,12 +21361,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4096899144100922, guid: a5c24b54b44e6489ebb8dadfa52965ff, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114003259141962740, guid: a5c24b54b44e6489ebb8dadfa52965ff,
         type: 2}
       propertyPath: msBetweenShots
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1907246099654548, guid: a5c24b54b44e6489ebb8dadfa52965ff, type: 2}
+      propertyPath: m_TagString
+      value: Player2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5c24b54b44e6489ebb8dadfa52965ff, type: 2}
@@ -21019,7 +21412,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 46
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -21452,9 +21845,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1505859364
 Prefab:
   m_ObjectHideFlags: 0
@@ -21543,7 +21947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 62
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -21829,7 +22233,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 38
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -21875,7 +22279,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 44
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -21926,7 +22330,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 51
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -22150,9 +22554,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1561146201
 Prefab:
   m_ObjectHideFlags: 0
@@ -22220,9 +22635,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &1561556227 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1954868338240616, guid: 117cff77199034bb59b1426ddc7ac180,
@@ -22244,9 +22670,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1564388271
 Prefab:
   m_ObjectHideFlags: 0
@@ -22381,7 +22818,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 47
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -22462,9 +22899,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &1578133413
 GameObject:
   m_ObjectHideFlags: 0
@@ -23234,7 +23682,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4018620434544258, guid: e988ba57b5d0a4640b703456808cc5fb, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e988ba57b5d0a4640b703456808cc5fb, type: 2}
@@ -23260,9 +23708,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!4 &1647891477 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4027498578047056, guid: 117cff77199034bb59b1426ddc7ac180,
@@ -23305,7 +23764,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -23395,7 +23854,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 52
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -24048,7 +24507,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 42
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -24818,9 +25277,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1767092318
 Prefab:
   m_ObjectHideFlags: 0
@@ -25577,9 +26047,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1818193227
 Prefab:
   m_ObjectHideFlags: 0
@@ -25617,7 +26098,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -25816,7 +26297,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -26404,7 +26885,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 26
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -26577,9 +27058,25 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!1 &1872757588 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1907246099654548, guid: a5c24b54b44e6489ebb8dadfa52965ff,
+    type: 2}
+  m_PrefabInternal: {fileID: 1468183985}
 --- !u!1001 &1874141563
 Prefab:
   m_ObjectHideFlags: 0
@@ -26617,7 +27114,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 39
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -27508,9 +28005,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1939439250
 Prefab:
   m_ObjectHideFlags: 0
@@ -27915,9 +28423,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1956244515
 Prefab:
   m_ObjectHideFlags: 0
@@ -28031,9 +28550,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1965114101
 Prefab:
   m_ObjectHideFlags: 0
@@ -28168,7 +28698,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 53
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -28409,7 +28939,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323860123395716, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_RootOrder
-      value: 54
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 1210524838398870, guid: 147e8760b62e84fd79ffc268eb104d65, type: 2}
       propertyPath: m_Name
@@ -28608,7 +29138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 63
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4998150341475602, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -29853,7 +30383,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4657472413331516, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_RootOrder
-      value: 45
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 1511361463891658, guid: 24d62963e8af5c74eb086d8920d0883b, type: 2}
       propertyPath: m_Name
@@ -30072,9 +30602,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &2124176161
 Prefab:
   m_ObjectHideFlags: 0
