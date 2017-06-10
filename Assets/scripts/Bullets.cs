@@ -12,9 +12,17 @@ public class Bullets : MonoBehaviour {
 	void Update () {
 		float moveDistance = spd * Time.deltaTime; 
 		transform.Translate (Vector3.up * moveDistance);
+
+		
+
+
 	} //총알 발사
 	void OnTriggerEnter2D(Collider2D col) {
 		Debug.Log("OnTriggerEnter");
+
+		if(col.gameObject.name.Contains( "wall")){
+			Destroy(gameObject);
+		}
 		if(col.gameObject.name == "Enemy") {
 			Destroy(col.gameObject);
 			Debug.Log("Destroy");
