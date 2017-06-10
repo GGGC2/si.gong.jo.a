@@ -172,7 +172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  spd: 0
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  range: 0
+  spd: 1
 --- !u!114 &114641104362121318
 MonoBehaviour:
   m_ObjectHideFlags: 1

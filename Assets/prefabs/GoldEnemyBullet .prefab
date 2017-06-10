@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212543075455455676}
   - component: {fileID: 61394797133781226}
   - component: {fileID: 50182560772251472}
-  - component: {fileID: 114384726870368134}
+  - component: {fileID: 114387569588976828}
   m_Layer: 0
   m_Name: 'GoldEnemyBullet '
   m_TagString: Untagged
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &114384726870368134
+--- !u!114 &114387569588976828
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1679977694706966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7705b3ab6d478f4395de413fcf1bb33, type: 3}
+  m_Script: {fileID: 11500000, guid: 157a30ab69bbc6c4f871038962f5b93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212543075455455676

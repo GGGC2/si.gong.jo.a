@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212812742834034902}
   - component: {fileID: 61926927047091918}
   - component: {fileID: 50868717770987512}
-  - component: {fileID: 114376906780185714}
+  - component: {fileID: 114316201627382862}
   m_Layer: 0
-  m_Name: enemyBullet
+  m_Name: BronzeEnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &114376906780185714
+--- !u!114 &114316201627382862
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,9 +96,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1658198571284602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4350c83102bf09458a6a2df7808683a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bc23bf2861093f41aedc771e898571f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p: {fileID: 0}
 --- !u!212 &212812742834034902
 SpriteRenderer:
   m_ObjectHideFlags: 1
