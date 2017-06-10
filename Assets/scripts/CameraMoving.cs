@@ -7,14 +7,24 @@ public class CameraMoving : MonoBehaviour {
 	public GameObject player2;
 	private Vector3 offset;
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player");
-		player2 = GameObject.FindGameObjectWithTag("Player2");
+	//	player = GameObject.FindGameObjectWithTag("Player");
+	//	player2 = GameObject.FindGameObjectWithTag("Player2");
 		//offset = transform.position - (player.transform.position + player2.transform.position)/2;
 	}
 	
 	void LateUpdate () {
-		transform.position = (player.transform.position + player2.transform.position) * 0.5f;
-		transform.position = new Vector3(transform.position.x, transform.position.y, -10 );
+		if (player != null && player2 != null) {
+			transform.position = (player.transform.position + player2.transform.position) * 0.5f;
+		}
 	//	transform.position = player.transform.position + offset;
+		if(player == null) {
+			transform.position = player2.transform.position;
+		}
+		if(player2 == null) {
+			transform.position = player.transform.position;
+		}
+
+			transform.position = new Vector3(transform.position.x, transform.position.y, -10 );
 	}
+	
 }
