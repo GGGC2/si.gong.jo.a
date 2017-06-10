@@ -23,9 +23,9 @@ public class Bullets : MonoBehaviour {
 		if(col.gameObject.name.Contains( "wall")){
 			Destroy(gameObject);
 		}
-		if(col.gameObject.name == "Enemy") {
-			Destroy(col.gameObject);
-			Debug.Log("Destroy");
+		if (col.gameObject.name.Contains("Enemy")) {
+			Destroy(gameObject);
+			col.SendMessage("ehit");
 		}
 	}
 }

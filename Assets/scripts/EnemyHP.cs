@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHP : MonoBehaviour {
+public class EnemyHP : MonoBehaviour {
 
 
-	public int hp = 3;
+	public int ehp = 5; //ehp = enemyhp
 	void Start () {
 		
 	}
@@ -16,13 +16,14 @@ public class PlayerHP : MonoBehaviour {
 		}
 
 
-	void hit() {
+	void ehit() {
 
-		hp = hp - 1;
+		ehp = ehp - 1;
 
-		if(hp < 1) {
+		if(ehp < 1) {
 		Destroy(gameObject);
 			}
 		}
 
 }
+
