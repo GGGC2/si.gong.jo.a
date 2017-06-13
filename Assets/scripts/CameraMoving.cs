@@ -13,6 +13,10 @@ public class CameraMoving : MonoBehaviour {
 	}
 	
 	void LateUpdate () {
+		if (player == null && player2 == null) {
+			return;
+		}
+		
 		if (player != null && player2 != null) {
 			transform.position = (player.transform.position + player2.transform.position) * 0.5f;
 		}

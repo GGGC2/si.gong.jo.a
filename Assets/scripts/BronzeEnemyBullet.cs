@@ -16,6 +16,7 @@ public class BronzeEnemyBullet : MonoBehaviour {
 
 		if (player == null) {
 			Destroy(gameObject);
+			return;
 		}
 
 		spd = 10.0f;

@@ -19,6 +19,9 @@ public class PlayerFinder : MonoBehaviour {
 
 	public GameObject FindNearestPlayer(Vector3 position, float range) {
 		GameObject nearest = FindNearestPlayer(position);
+		if (nearest == null) {
+			return null;
+		}
         var nearestRange = Vector2.Distance(position, nearest.transform.position);
 		if (nearestRange > range) {
 			return null;
