@@ -36,11 +36,11 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("enemy trigger");
+        // Debug.Log("enemy trigger");
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("enemy collision");
+        // Debug.Log("enemy collision");
     }
 }
