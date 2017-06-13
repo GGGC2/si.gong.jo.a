@@ -11,34 +11,17 @@ public class BronzeEnemyBullet : MonoBehaviour {
 	float delta;
 
 	void Start () {
-			          var player1 = GameObject.FindGameObjectWithTag ("Player");
-        var player2 = GameObject.FindGameObjectWithTag("Player2");
 
-        if (player == null && player2 == null) {
+		player = PlayerFinder.Instance.FindNearestPlayer(transform.position);
 
-        }
-        else if (player== null) {
-            player = player1;
-        }
-        else if (player2 == null) {
-       player = player2;
-        }
-        else {
-            var range1 = Vector2.Distance (transform.position, player.transform.position);
-        
-            var range2 = Vector2.Distance (transform.position, player2.transform.position);
+		if (player == null) {
+			Destroy(gameObject);
+		}
 
-            if (range1 <= range2) {
-player = player1;
-            } else {
-player = player2;
-            }
-        }
 		spd = 10.0f;
 		delta = spd * Time.deltaTime;
 		diff = (player.transform.position - transform.position).normalized;
 		deltaVec = diff * delta;
-		
 	}
 
 	void Update () {
