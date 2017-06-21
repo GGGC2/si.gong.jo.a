@@ -7,7 +7,7 @@ public class PlayerShooter : MonoBehaviour {
 	public Gun con;
 	public float speed = 1.0f;
 	void Update () {
-		if(Input.GetMouseButton(0)) {
+		if(Input.GetKeyDown(KeyCode.Space)) {
 			Debug.Log("Shoot");
 			con.Shoot();
 		}
